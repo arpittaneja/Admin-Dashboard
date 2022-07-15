@@ -8,7 +8,7 @@
 html,
 body {
     border: 2px solid blue;
-    height: 100%;
+    /* height: 100%; */
 }
 
 body {
@@ -23,6 +23,7 @@ body>div {
 
 .main {
     grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(226, 232, 240);
 }
 
 .sidebar {
@@ -37,7 +38,7 @@ body>div {
 .options-one,
 .options-two {
     padding-left: clamp(4px, 6%, 50px);
-    color: white;   
+    color: white;
 }
 
 .sidebar>div {
@@ -102,7 +103,7 @@ li {
 }
 
 .main>div {
-    border: 2px solid palevioletred;
+    /* border: 2px solid palevioletred; */
 }
 
 .projects {
@@ -113,7 +114,7 @@ li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 
@@ -160,13 +161,14 @@ li {
     gap: 16px;
 }
 
-.search-container>img{
-width: 50px;
-} 
+.search-container>img {
+    width: 50px;
+}
 
 .search-container>* {
     /* border: 2px solid magenta; */
 }
+
 /* 
 .search-container{
     display: flex;
@@ -188,6 +190,7 @@ width: 50px;
     align-items: center;
     justify-content: start;
     gap: 30px;
+    padding-left: 50px;
 }
 
 .actions {
@@ -206,84 +209,91 @@ width: 50px;
     /* grid-auto-rows: 200px; */
     /* grid-template-rows: repeat(auto-fit, 200px); */
     /* grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-auto-rows: 200px;;
+    grid-auto-rows: 200px;
+    ;
     padding-inline: 10px;
     gap: 20px;
 }
 
 .card {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 15px;
     max-height: 250px;
-    display: flex;
+    /* display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
+    justify-content: start; */
     padding: clamp(1rem, 10%, 2rem);
+    background-color: white;
+    /* border: none; */
+    box-shadow:
+        0px 0px 10px rgba(0, 0, 0, 0.3);
+
 }
 
-.announcements,
+.trending,
 .contact {
     position: relative;
     padding-top: 50px;
     padding-inline: 10px;
 }
 
-.announcement-container *,
-.contact-container *{
-    border: 3px solid teal;
-    border-radius: 30px;
+.trending-container *,
+.contact-container * .trending-container,
+.contact-container {
+    /* border: 3px solid teal; */
+    /* border-radius: 30px; */
 }
 
 .small-card {
-    border: 2px solid khaki;
+    /* border: 2px solid khaki; */
     font-size: 0.8rem;
-    padding: 4vh 0;
-}
+    /* padding: 4vh 0; */
 
-.trend {
-    border: 2px solid khaki;
-    font-size: 0.8rem;
-    padding: 4vh 0;
 }
 
 .projects>span,
-.announcements>span,
-.trending>span {
+.trending>span,
+.contact>span {
     position: absolute;
     top: 13px;
     left: 15px;
     font-size: 1.2rem;
 }
 
-.mini-profile-container img{
+.mini-profile-container :nth-child(1) {
+    width: 40px;
+}
+
+.mini-profile-container :nth-child(2) {
     width: 60px;
 }
 
-.mini-profile-container{
+.mini-profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mini-profile-container *{
+.mini-profile-container * {
     /* border: 2px solid red; */
 }
 
-.lower-head img{
+.lower-head img {
     width: 90px;
 }
 
-.lower-head *{
+.lower-head * {
     /* border: 2px solid brown; */
 }
 
-.actions{
+.actions {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
 }
-.lower-head button{
+
+.lower-head button {
     width: 100px;
     height: 35px;
     border-radius: 30px;
@@ -291,16 +301,140 @@ width: 50px;
     cursor: pointer;
 }
 
-.contact-container *{
-    border: 2px solid hotpink;
+.small-card {
+    /* border: 2px solid hotpink; */
     display: flex;
     align-items: center;
-    /* text-overflow: hidden; */
 }
-.contact-container img{
+
+.contact-container img {
     width: 50px;
 }
 
-.small-card{
-    height: 80px;
+.contact-container> :first-child,
+.contact-container> :nth-child(2),
+.trending-container> :first-child,
+.trending-container> :nth-child(2) {
+    border-bottom: 1px solid rgb(197, 197, 197);
+
+}
+
+.small-card {
+    height: 70px;
+    /* border-bottom: 1px solid #000; */
+}
+
+.trending-container {
+    background-color: white;
+
+    /* border: 2px solid goldenrod; */
+    border-radius: 20px;
+    box-shadow:
+        0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+}
+
+.contact-container {
+    background-color: white;
+
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    box-shadow:
+        0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+
+}
+
+.trending img {
+    width: 50px;
+}
+
+.card {
+    border-left: 8px solid rgb(255, 200, 57);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    gap: 10px 0;
+    /* align-items: center; */
+}
+
+.card * {
+    /* border: 2px solid lawngreen; */
+}
+
+.card h3 {
+    align-self: start;
+}
+
+.card img {
+    width: 50px;
+    margin-inline: -10px;
+}
+
+.tech {
+    /* margin-top: 20px; */
+    align-self: flex-end;
+    /* margin-bottom: -70px; */
+
+}
+
+.small-card {
+    width: 96%;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+img[src="img/github.png"],
+img[src="img/linkedin.png"],
+img[src="img/email.png"] {
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-container>.small-card:hover>img[src="img/github.png"] {
+    transform: rotate(360deg) scale(1.1);
+    ;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.contact-container>.small-card:hover>img[src="img/linkedin.png"] {
+    transform: scale(1.2);
+    filter: invert(28%) sepia(100%) saturate(1472%) hue-rotate(178deg) brightness(90%) contrast(101%);
+}
+
+.contact-container>.small-card:hover>img[src="img/email.png"] {
+    transform: scale(1.05);
+    filter: invert(72%) sepia(2%) saturate(141%) hue-rotate(77deg) brightness(90%) contrast(85%);
+}
+
+.sidebar>.title>span,
+.options-one>ul>li>span,
+.options-two>ul>li>span {
+    cursor: pointer;
+}
+
+button{
+    color: white;
+    background-color: rgb(25, 146, 212);
+    transition: all 0.1s ease;
+}
+
+button:hover{
+    background-color: rgb(88, 175, 223);
+}
+
+button:active{
+    transform: translateY(2px);
 }
