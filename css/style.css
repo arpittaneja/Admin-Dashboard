@@ -174,12 +174,12 @@ button:active {
 }
 
 .card {
-    border-radius: 20px;
     padding: clamp(1rem, 10%, 2rem);
     background-color: white;
     box-shadow:
-        0px 0px 10px rgba(0, 0, 0, 0.3);
+    0px 0px 10px rgba(0, 0, 0, 0.3);
     border-left: 8px solid rgb(255, 200, 57);
+    border-radius: 12px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
